@@ -21,7 +21,7 @@ PASSWORD: password for bot account, TYPE: STR
 mainUsername: Username of Personal Account, TYPE: STR
 subReddit: Subreddit to post on, TYPE: STR
 triggerPhrases1:  List of phrases to search for, TYPE: LIST(STR)
-trigerPhrases2: List of phrases to search for, TYPE: LIST(STR)
+triggerPhrases2: List of phrases to search for, TYPE: LIST(STR)
 responses1:  List of Repsonses if a phrase in triggerPhrases1 occurs in the post, TYPE: LIST(STR)
 responses2:  List of Repsonses if a phrase in triggerPhrases2 occurs in the post, TYPE: LIST(STR)
 """
@@ -29,7 +29,7 @@ responses2:  List of Repsonses if a phrase in triggerPhrases2 occurs in the post
 
 
 def run_bot(clientID, clientSecret, USERNAME, PASSWORD, mainUsername, subReddit,
-            triggerPhrases1, trigerPhrases2, responses1, responses2):                   
+            triggerPhrases1, triggerPhrases2, responses1, responses2):                   
 
     try:
         reddit = praw.Reddit(client_id = clientID,
@@ -57,7 +57,7 @@ def run_bot(clientID, clientSecret, USERNAME, PASSWORD, mainUsername, subReddit,
                     submission.reply(responses1[index])
                     print("posted: " , responses1[index])
                     sleep(605)
-            for trigger2 in trigerPhrases2:
+            for trigger2 in triggerPhrases2:
                 if trigger2 in normalized_title:
                     index = rand.randint(0,len(responses2)-1)
                     submission.reply(responses2[index])
