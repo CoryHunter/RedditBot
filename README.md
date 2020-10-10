@@ -5,8 +5,8 @@ The function run_bot takes an assortment of arguments. The clientID and clientSe
 in the set up of a bot account for reddit. These are taken in as strings. The username and password
 are also taken in as strings. Reddit asks all bots to be associated with a real account so the
 mainUsername argument is your main accounts username taken as a string. Reddit breaks its posts
-into subReddits and so pic the desired subreddit and enter it as a string. trigerPhrases1,
-trigerPhrases2 are lists of strings in which the bot looks for these strings in the posts
+into subReddits and so pic the desired subreddit and enter it as a string. triggerPhrases1,
+triggerPhrases2 are lists of strings in which the bot looks for these strings in the posts
 and if one of the strings is in the post it comments on the post. responses1, responses2
 are a list of strings that will be the comments when the post has a trigger phrase. The bot
 will take one of these strings at random from the list and post it. The bot allows for two
@@ -26,8 +26,8 @@ In this example, the bot will be searching through neverbrokeabone.
 
 <pre><code>run_bot(clientID = *****, clientSecret = *****, USERNAME = ******, PASSWORD = *******,
         mainUsername = *******, subReddit = "neverbrokeabone",
-        trigerPhrases1 = ["sorry" ,"fail", "goodbye"],
-        trigerPhrases2 = ["milk", "calcium"],
+        triggerPhrases1 = ["sorry" ,"fail", "goodbye"],
+        triggerPhrases2 = ["milk", "calcium"],
         responses1 = ["Get the hence!", "You have failed us","Mods you know what to do", "Should have drunk your milk" ],
         responses2 = ["The Nectar of the Gods","Love me some sweet milk", "MIIILLLLKKKKK", "Drink it up", "Calcium makes boy grow strong"])
 </code></pre>   
